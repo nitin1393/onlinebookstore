@@ -32,6 +32,13 @@ pipeline {
             echo "Deployment"
         }
     }
+    stage("Email notification")
+    {
+        steps{
+            
+            emailext body: 'Job notification', subject: 'DevOpstesting', to: 'khannanitin106@gmail.com'
+        }
+    }
 
 }
 }
