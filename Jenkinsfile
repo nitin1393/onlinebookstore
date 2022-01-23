@@ -30,7 +30,7 @@ pipeline {
 }
 
 post{
-    success{
-          emailext( bcc: '', body: 'JOB SUCCESS', cc: '', from: '', replyTo: '', subject: 'Test', to: 'khannanitin106@gmail.com')
+    always{
+         echo 'I am success now'
     }
 }
