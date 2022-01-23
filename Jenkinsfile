@@ -36,7 +36,7 @@ pipeline {
     {
         steps{
 
-           mail bcc: 'DevOps test', body: 'Practical', cc: '', from: '', replyTo: '', subject: 'test', to: 'khannanitin106@gmail.com'
+           mail bcc: '', body: "'Status of \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\''", cc: '', from: '', replyTo: '', subject: "'Jobs status \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\''", to: 'khannanitin106@gmail.com'
         }
     }
 
