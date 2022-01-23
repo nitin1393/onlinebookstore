@@ -23,8 +23,14 @@ pipeline {
     stage("Email Notification")
     {
         steps{
-            mail bcc: '', body: 'Hi', cc: '', from: '', replyTo: '', subject: 'Test', to: 'khannanitin106@gmail.com'
+            mail bcc: '', body: 'JOB SUCCESS', cc: '', from: '', replyTo: '', subject: 'Test', to: 'khannanitin106@gmail.com'
         }
     }
 }
+}
+
+post{
+    success{
+          mail bcc: '', body: 'JOB SUCCESS', cc: '', from: '', replyTo: '', subject: 'Test', to: 'khannanitin106@gmail.com'
+    }
 }
