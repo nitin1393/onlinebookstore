@@ -20,9 +20,10 @@ pipeline {
             echo "Testing start App"
         }
     }
-    post{
-        success{
-            emailext(mail bcc: '', body: 'Hi', cc: '', from: '', replyTo: '', subject: 'Test', to: 'khannanitin106@gmail.com')
+    stage("Email Notification")
+    {
+        steps{
+            mail bcc: '', body: 'Hi', cc: '', from: '', replyTo: '', subject: 'Test', to: 'khannanitin106@gmail.com'
         }
     }
 }
