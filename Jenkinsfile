@@ -23,14 +23,15 @@ pipeline {
     stage("Email Notification")
     {
         steps{
-            mail bcc: '', body: "'test \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\''", cc: '', from: '', replyTo: '', subject: "'Hi DevOps \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\''", to: 'khannanitin106@gmail.com'
+             echo  "mail sent"
         }
     }
-}
-}
 
-post{
-    always{
-         echo 'I am success now'
+    stage("Deployment"){
+        steps{
+            echo "Deployment"
+        }
     }
+
+}
 }
