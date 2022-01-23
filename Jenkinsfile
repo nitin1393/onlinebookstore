@@ -35,8 +35,8 @@ pipeline {
     stage("Email notification")
     {
         steps{
-            
-            emailext body: 'Job notification', subject: 'DevOpstesting', to: 'khannanitin106@gmail.com'
+
+           mail bcc: 'DevOps test', body: 'Practical', cc: '', from: '', replyTo: '', subject: 'test', to: 'khannanitin106@gmail.com'
         }
     }
 
