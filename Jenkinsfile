@@ -31,6 +31,6 @@ pipeline {
 
 post{
     success{
-          mail bcc: '', body: 'JOB SUCCESS', cc: '', from: '', replyTo: '', subject: 'Test', to: 'khannanitin106@gmail.com'
+          emailext( bcc: '', body: 'JOB SUCCESS', cc: '', from: '', replyTo: '', subject: 'Test', to: 'khannanitin106@gmail.com')
     }
 }
